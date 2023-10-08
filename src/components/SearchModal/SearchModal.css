@@ -1,19 +1,29 @@
 .search-box {
-   position: fixed;
+   position: absolute;
    top: 0;
    left: 0;
    bottom: 0;
-   right: 0;
    background-color: rgba(0, 0, 0, 0.8);
-   z-index: 9999;
    overflow: auto;
+   width: 100%;
 }
 
 .search-form {
-   width: 1000px;
+   width: 1280px;
+   position: fixed;
+   top: 26px;
+   left: 129px;
+   display: flex;
+   align-items: center;
    background-color: white;
 }
 
+.search-logo {
+   font-size: 20px;
+   margin-right: 10px;
+}
+
 .search-input {
-   border: 1px solid #222;
+   all: unset;
+   padding: 20px 10px;
 }

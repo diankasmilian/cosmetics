@@ -10,19 +10,23 @@ import SearchModal from '../SearchModal/SearchModal';
 const Layout = () => {
   const [showSearchModal, setShowSearchModal] = useState(false)
 
-  const searchModal = () => {
-setShowSearchModal(!showSearchModal)
+  const openSearchModal = () => {
+setShowSearchModal(true)
+  }
+
+  const closeSearchModal = () => {
+    setShowSearchModal(false)
   }
 
   return (
     <div className="wrapper">
       <header>
         <div className="header">
-          <div className="search">
-            
-            {showSearchModal ? <SearchModal/> : <FaSearch className="search-icon" onClick={searchModal}/>}
-
+        {showSearchModal && <SearchModal closeSearchModal={closeSearchModal}/>}
+         <div className="search">
+            <FaSearch className="search-icon" onClick={openSearchModal}/>
           </div>
+          
           <div className="header-logo">
             <NavLink className="logo" to="/">
               Cosmetics
